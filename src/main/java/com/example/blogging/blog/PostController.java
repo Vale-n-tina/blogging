@@ -20,11 +20,18 @@ public class PostController {
 
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public Blog findById (@PathVariable Long id){
-        return  blogService.findById(id);
+    public Blog findById(@PathVariable Long id) {
+        return blogService.findById(id);
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-
+    public BlogResponse save(@RequestBody BlogRequest request) {
+        return blogService.save(request);
+    }
+    @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public BlogResponsComplete modifica(@PathVariable Long id,@RequestBody BlogRequest request){
+        return blogService.modifica(id, request);
+    }
 }
