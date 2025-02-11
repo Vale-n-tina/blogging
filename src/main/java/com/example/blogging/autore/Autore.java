@@ -21,5 +21,10 @@ public class Autore {
     private Date dataNascita;
     private String avatar="https://ui-avatars.com/api/?name=Mario+Rossi";
 
-
+    public Autore(String nome, Date dataNascita, String email, String cognome) {
+        this.nome = nome;
+        this.dataNascita = dataNascita;
+        this.email = email;
+        this.cognome = cognome;
+    }
 }

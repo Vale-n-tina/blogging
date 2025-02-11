@@ -17,7 +17,12 @@ public class Blog {
     private String titolo;
     private String cover="https://picsum.photo/200/300";
     private String contenuto;
-    private int tempoDiLEttura;
+    private int tempoDiLettura;
 
-
+    public Blog(String categoria, String titolo, String contenuto, int tempoDiLettura) {
+        this.categoria = categoria;
+        this.titolo = titolo;
+        this.contenuto = contenuto;
+        this.tempoDiLettura = tempoDiLettura;
+    }
 }
